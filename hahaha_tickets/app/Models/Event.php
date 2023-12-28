@@ -8,17 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Event extends Model
 {
     use HasFactory;
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
+    
     protected $fillable = [
-        'nume',
-        'descriere',
+        'title',
+        'price',
+        'desc',
         'data',
-        'locatia',
-        'sponsori',
-        'artisti',
+        'location',
     ];
 }

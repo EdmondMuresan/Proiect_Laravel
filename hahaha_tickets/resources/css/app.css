@@ -1,0 +1,31 @@
+/* Menu Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FDF7E7; /* Set the background color */
+  }
+  
+  .menu {
+    background-color: #02121E; /* Set the primary color for the menu */
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    list-style: none; /* Remove default list styles */
+  }
+  
+  .menu li {
+    display: inline; /* Display menu items horizontally */
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .menu a:hover {
+    background-color: #E8072D; /* Change color on hover */
+    border-radius: 5px;
+  }
+  
