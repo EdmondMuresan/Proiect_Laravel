@@ -29,3 +29,6 @@ Route::get('add_artist', [ArtistController::class, 'add_artist'])->name('add_art
 Route::delete('artist/{id}', [ArtistController::class,'delete'])->name('artist.delete');
 Route::get('/artist/{id}/edit', [ArtistController::class,'edit'])->name('artist.edit');
 Route::put('/artist/{id}', [ArtistController::class,'update'])->name('artist.update');
+Auth::routes();
+
+Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

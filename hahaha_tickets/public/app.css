@@ -110,3 +110,20 @@ button:active {
 p{
   margin: 10px;
 }
+col-md-8 {
+  /* Your modifications here */
+  margin: 20px auto; /* Example margin change */
+  padding: 15px; /* Example padding change */
+}
+
+.card-body {
+  /* Your modifications here */
+  background-color: #fff; /* Example background color change */
+  border-radius: 8px; /* Example border-radius change */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Example box shadow */
+}
+
+.row.mb-3 {
+  /* Your modifications here */
+  margin-bottom: 30px; /* Example margin-bottom change */
+}
