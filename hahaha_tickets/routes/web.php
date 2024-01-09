@@ -14,7 +14,7 @@ use App\Http\Controllers\ArtistController;
 |
 */
 
-Route::get('/', [EventController::class, 'show_event'] )->name('home');
+Route::get('/', [EventController::class, 'show_event'] )->name('show_event');
 Route::get('despre', function () {
     return view('despre');
 })->name('despre');
@@ -32,3 +32,7 @@ Route::put('/artist/{id}', [ArtistController::class,'update'])->name('artist.upd
 Auth::routes();
 
 Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('show-tickets', [App\Http\Controllers\TicketController::class, 'showTickets'])->name('show-tickets');
+Route::post('add-ticket', [App\Http\Controllers\TicketController::class, 'addTicket'])->name('add-ticket');
+Route::post('delete-ticket', [App\Http\Controllers\TicketController::class, 'deleteTicket'])->name('delete-ticket');

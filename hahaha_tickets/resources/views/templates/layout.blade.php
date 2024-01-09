@@ -12,9 +12,9 @@
     <div class="header">
         <a href="{{ route('home') }}"><img src="{{ asset('icon.ico') }}" alt="Icon" class="logo-icon"></a>
         <ul class="menu">
-            <li><a href="{{ route('home') }}">Evenimente</a></li>
+            <li><a href="{{ route('show_event') }}">Evenimente</a></li>
             <li><a href="{{ route('artist')}}">Artisti</a></li>
-            <li><a href="#">Bilete</a></li>
+            <li><a href="{{ route('show-tickets') }}">Bilete</a></li>
             <li><a href="{{ route('despre') }}">Despre</a></li>
             <!-- Authentication Links -->
             @guest
