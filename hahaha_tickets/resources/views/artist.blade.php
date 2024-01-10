@@ -3,8 +3,10 @@
 <div>
 @foreach ($artists as $artist)
     <p>{{ $artist->id }} {{ $artist->name }}</p>
+    @if(auth()->check() && auth()->user()->isAdmin())
     <p><span class="artist-desc" style="display: none;">Phone: {{ $artist->phone_number }} <br> Email: {{ $artist->email }} <br> Salary: {{$artist->salary }}</span></p>
     <p><button class="more-button" onclick="toggleDescription(this)">More<span class="arrow">&#9660;</span></button></p>
+    
     <form class="option" action="{{ route('artist.delete', ['id' => $artist->id]) }}" method="POST">
         @csrf
         @method('DELETE')
@@ -14,9 +16,11 @@
         @csrf
         <button type="submit">Edit Artist</button>
     </form>
+    @endif
 @endforeach
 </div>
 <div>
+    @if(auth()->check() && auth()->user()->isAdmin())
     <div>
         <form action="{{ route('add_artist') }}" method="GET">
             <button type="submit">Add a new Artist</button>
@@ -34,5 +38,6 @@
             }
         }
     </script>
+    @endif
 </div>
 @endsection
