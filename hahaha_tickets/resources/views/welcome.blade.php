@@ -17,6 +17,12 @@
                 @csrf
                 <button type="submit">Edit Event</button>
             </form>
+            <form class="option" action="{{ route('add-ticket',$event->id) }}" method="POST">
+                @csrf
+                 <input type="number" name="quantity" value="1" min="1">
+                <button type="submit">Cumpara</button>
+
+            </form>
         @endforeach
     </div>
     <div>

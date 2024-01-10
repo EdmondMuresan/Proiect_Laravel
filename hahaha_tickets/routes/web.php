@@ -34,5 +34,5 @@ Auth::routes();
 Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('show-tickets', [App\Http\Controllers\TicketController::class, 'showTickets'])->name('show-tickets');
-Route::post('add-ticket', [App\Http\Controllers\TicketController::class, 'addTicket'])->name('add-ticket');
-Route::post('delete-ticket', [App\Http\Controllers\TicketController::class, 'deleteTicket'])->name('delete-ticket');
+Route::post('add-ticket/{eventId}', [App\Http\Controllers\TicketController::class, 'addTicket'])->name('add-ticket');
+Route::delete('deleteTicket/{id}', [App\Http\Controllers\TicketController::class, 'deleteTicket'])->name('deleteTicket');
