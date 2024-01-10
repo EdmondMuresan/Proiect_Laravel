@@ -20,13 +20,14 @@
                 <button type="submit">Edit Event</button>
             </form>
             @endif
+            @if(auth()->check())
             <form class="option" action="{{ route('add-ticket',$event->id) }}" method="POST">
                 @csrf
                  <input type="number" name="quantity" value="1" min="1">
                 <button type="submit">Cumpara</button>
 
             </form>
-              <!-- Admin-specific UI elements -->
+            @endif
             
         @endforeach
     </div>

@@ -1,5 +1,8 @@
 @extends('templates\layout')
 @section('content')
+@if(!auth()->user())
+<p>Creaza cont sau autentifica-te pentru a cumpara bilet</p>
+@endif
 <div>
     <div id="csrfTokenElement" data-csrf-token="{{ csrf_token() }}"></div>
 
